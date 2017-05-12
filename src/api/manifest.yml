@@ -1,12 +1,13 @@
 ---
 applications:
-- name: apiservice
+- name: xmltocsv.apiservice
+  host: xmltocsv
   buildpack: dotnet_core_buildpack
-  random-route: true
   health-check-type: none
   memory: 512M
   services:
-  - rabbitmq
-  - myRedisService
+  - myRabbitService
+  - redis
+  - myMySqlService
   env:
     ASPNETCORE_ENVIRONMENT: Production
