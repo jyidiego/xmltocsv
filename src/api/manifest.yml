@@ -1,9 +1,8 @@
 ---
 applications:
-- name: xmltocsv.apiservice
+- name: xmltocsv
   host: xmltocsv
   buildpack: dotnet_core_buildpack
-  health-check-type: none
   memory: 512M
   services:
   - myRabbitService
